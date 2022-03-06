@@ -149,11 +149,25 @@ for (int i=0; i<= a.length - 1; i++) {
   // Build a WHILE loop that turns on the heat if the thermo.getTemp() is less than 72.0 else it turns on
   // the A/C if thermo.getTemp() is greater that 76.0.
   void soln17() {
-  
+    double temp = thermo.getTemp();
+    int statusOffHeatAC = 0;
+  while (temp < 72.0 || temp > 76.0) { // don't really need this while loop, just using it per the prompt
+    if (temp < 72.0) {
+      statusOffHeatAC = 1;
+    } else {
+      statusOffHeatAC = 2;
+    }
   }
-  
-  void soln18() {
-  // and put your code here.
+  }
+
+  // Find a number greater than Pi in a double array, print number and its index.
+  void soln18(double[] array) {
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] > Math.PI) {
+        System.out.println(array[i] + ", " + i);
+        break;
+      }
+    }
   }
   
   void soln19() {
