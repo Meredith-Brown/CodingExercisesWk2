@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Solution {
   
   // For loop from 100 to 5 by 5. print index var.
@@ -151,7 +153,7 @@ for (int i=0; i<= a.length - 1; i++) {
   void soln17() {
     double temp = thermo.getTemp();
     int statusOffHeatAC = 0;
-  while (temp < 72.0 || temp > 76.0) { // don't really need this while loop, just using it per the prompt
+  while (temp < 72.0 || temp > 76.0) { // don't really need this while loop, just using it per the prompt --- could use "while(true) but need to be sure to input a break at some point...
     if (temp < 72.0) {
       statusOffHeatAC = 1;
     } else {
@@ -169,15 +171,31 @@ for (int i=0; i<= a.length - 1; i++) {
       }
     }
   }
-  
+
+  // Given an array of objects (of class Xaction) w/nulls, sum all the values of the objects in the array,
+  // using Xaction::getValue(). Print the sum.
   void soln19() {
-  // and put your code here.
+  int sum = 0;
+  for (int i = 0; i < array.length; i++) {
+    if (Xaction.getValue(array[i]) = null) {
+    } else {
+      sum += Xaction.getValue(array[i]);
+    }
   }
-  
+    System.out.println(sum);
+  }
+
+  // reverse an array of objects of type Xaction
   void soln20() {
-  // and put your code here.
+    // Xaction xaction = new Xaction; -> would only be needed (if Static? if not Static? ???)
+    for (int i = 0; i < array.length/2; i++) {
+      int temporary = Xaction.getValue(array[i]); // xaction (lowercase) in scenario above
+      Xaction.setValue(array[i]) = Xaction.getValue(array.length - i - 1);
+      Xaction.setValue(array.length - i - 1) = temporary;
+    }
   }
-  
+
+  // Print a 5's times table
   void soln21() {
   // and put your code here.
   }
