@@ -197,11 +197,23 @@ for (int i=0; i<= a.length - 1; i++) {
 
   // Print a 5's times table
   void soln21() {
-  // and put your code here.
+  StringBuilder table = new StringBuilder(); // see NumbersTrianglesTables lab
+  for (int w = 0; w < 2; w++) {
+    for (int h = 0; h < 10; h++) {
+      table.append(String.format("%3d", w * h));
+      table.append(" |");
+    }
+    table.append("\n");
   }
-  
+  String tableMultiplication = table.toString();
+  }
+
+  // detemine the hypotenuse of a 9 by 7 right triangle, assign it to a double
   void soln22() {
-  // and put your code here.
+  double hypotenuse = 0;
+  double a = 9;
+  double b = 7;
+  hypotenuse = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
   }
   
 }
