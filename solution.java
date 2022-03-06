@@ -92,8 +92,8 @@ for (int i=0; i<= a.length - 1; i++) {
   void soln11() {
   int x = 4;
   int y = 6;
-  for (int i = 0; i <= x; i++) {
-    for (int i2 = 0; i2 <= y; i2++) {
+  for (int i = 0; i < x; i++) {
+    for (int i2 = 0; i2 < y; i2++) {
       a[i][i2] = 0;
     }
   }
@@ -101,27 +101,55 @@ for (int i=0; i<= a.length - 1; i++) {
 
   // multiply each element of a 5 by 5 array of integers by 7
   void soln12() {
-  // and put your code here.
+  int x = 5;
+  int y = 5;
+  for (int i = 0; i < x; i++) {
+    for (int i2 = 0; i2 < y; i2++) {
+      a[i][i2] = a[i[i2]] * 7;
+    }
   }
-  
+  }
+  // *****CHECKED AGAINST YUN'S UP TO HERE*****
+
+  // create a method that takes a 5 by 5 array and produces a 5 by 5 array of booleans. each element in
+  // the result should be true if the value in the argument array is even, else it's false.
   void soln13() {
-  // and put your code here.
+  int rows = 5;
+  int columns = 5;
+  boolean[][] arrayTrueFalse = new boolean[rows][columns];
+  for (int i = 0; i < rows; i++) {
+    for (int i2 = 0; i2 < columns; i2++) {
+      arrayTrueFalse[i][i2] = (a[i][i2] % 2 == 0);
+    }
   }
-  
-  void soln14() {
-  // and put your code here.
   }
-  
-  void soln15() {
-  // and put your code here.
+
+  // create a method that takes two doubles and returns the first parameter raised to the second
+  // parameter's value
+  double soln14(double x, double y) {
+  return Math.pow(x, y);
   }
-  
+
+  // create a method that returns a boolean if the Object passed to it is a Fish or not
+  boolean soln15(Object input) {
+  return input instanceof Fish;
+  }
+
+  // There is an object x which has a method (double)Balance(). Build an IF statement that prints
+  // "Paid Off" if the result of the balance call is less than or equal to 1.0, else it prints the
+  // balance as a Dollar figure (2 decimal places)
   void soln16() {
-  // and put your code here.
+    if (Balance(x) <= 1.0) {
+      System.out.println("Paid Off");
+    } else {
+      System.out.println("$" + String.format(".2f", Balance(x)));
+    }
   }
-  
+
+  // Build a WHILE loop that turns on the heat if the thermo.getTemp() is less than 72.0 else it turns on
+  // the A/C if thermo.getTemp() is greater that 76.0.
   void soln17() {
-  // and put your code here.
+  
   }
   
   void soln18() {
